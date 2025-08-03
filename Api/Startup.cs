@@ -33,6 +33,7 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
+        var key = Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]);
         services.AddAuthentication(option =>
         {
             option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
