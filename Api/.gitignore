@@ -1,0 +1,41 @@
+# Pastas geradas automaticamente pelo build
+bin/
+obj/
+
+# Configurações locais do VSCode
+.vscode/
+
+# Configurações locais do Visual Studio
+.vs/
+*.user
+*.suo
+
+# Arquivos de cache, logs, pacotes
+*.log
+*.tlog/
+*.pdb
+*.cache
+
+# Diretórios de pacotes
+packages/
+*.nupkg
+
+# Configurações e arquivos de publish
+PublishProfiles/
+*.Publish.xml
+
+# Configurações locais sensíveis
+appsettings.json
+appsettings.Development.json
+appsettings.Local.json
+
+# Arquivos temporários do sistema
+*.tmp
+*.temp
+
+# Arquivos de backup
+*~
+*.bak
+
+# Diretórios de dependências, se houver
+node_modules/
