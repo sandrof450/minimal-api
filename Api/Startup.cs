@@ -43,7 +43,7 @@ public class Startup
             option.TokenValidationParameters = new TokenValidationParameters
             {
                 ValidateLifetime = true,
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key)),
+                IssuerSigningKey = new SymmetricSecurityKey(key),
                 ValidateIssuer = false,
                 ValidateAudience = false,
             };
