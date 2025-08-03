@@ -89,6 +89,15 @@ public class Startup
             ServerVersion.AutoDetect(Configuration.GetConnectionString("mysql"))
         )
         );
+
+        services.AddCors(options => {
+            options.AddDefaultPolicy(builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            });
+        });
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -98,8 +107,11 @@ public class Startup
 
         app.UseRouting();
 
+        app.UseCors();
+
         app.UseAuthentication();
         app.UseAuthorization();
+
 
 
         app.UseEndpoints(endpoints =>
