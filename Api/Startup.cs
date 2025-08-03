@@ -33,7 +33,9 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
-        var key = Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]);
+        var jwtKey = Configuration["Jwt:Key"] ?? throw new ArgumentNullException("Jwt:Key", "A chave JWT não foi encontrada na configuração.");
+        var key = Encoding.UTF8.GetBytes(jwtKey);
+
         services.AddAuthentication(option =>
         {
             option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
