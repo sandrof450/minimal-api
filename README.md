@@ -31,16 +31,11 @@ Editar
 ```bash
 docker build -t minimal-api:1.0 .
 2. Subir banco de dados com Docker Compose
-bash
-Copiar
-Editar
+
 docker compose up -d
 Isso sobe um container MySQL na porta 3306.
 
 3. Executar a API na mesma rede
-bash
-Copiar
-Editar
 docker run -it --rm \
   --name minimal-api \
   -p 5000:5000 \
@@ -49,25 +44,16 @@ docker run -it --rm \
 🔗 Acessar a API
 Depois que estiver rodando, acesse via navegador ou Postman:
 
-arduino
-Copiar
-Editar
 http://localhost:5000
 🔐 Autenticação
 A API utiliza autenticação com token JWT. Ao fazer login, você recebe um token que deve ser usado nas requisições protegidas com o cabeçalho:
 
-http
-Copiar
-Editar
 Authorization: Bearer <seu_token>
 🧪 Testes
 O projeto contém testes automatizados no diretório Test/.
 
 Para rodar os testes:
 
-bash
-Copiar
-Editar
 dotnet test
 📝 Licença
 Este projeto está licenciado sob os termos da MIT License.
