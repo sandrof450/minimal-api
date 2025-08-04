@@ -1,0 +1,16 @@
+name: minimal_api
+
+networks:
+  internal_net:
+    driver: bridge
+
+services:
+  database:
+    image: mysql:8.0
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: minimal_api
+    networks:
+      - internal_net

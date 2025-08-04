@@ -90,7 +90,7 @@ public class Startup
         options => options.UseMySql(
             Configuration.GetConnectionString("mysql"),
             ServerVersion.AutoDetect(Configuration.GetConnectionString("mysql"))
-        )
+            )
         );
 
         services.AddCors(options => {

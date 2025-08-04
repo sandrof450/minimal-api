@@ -1,0 +1,35 @@
+# Diretórios de build
+bin/
+obj/
+out/
+publish/
+
+# Diretórios de ferramentas
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Arquivos de controle de versão
+.git/
+.gitignore
+.gitattributes
+
+# Arquivos de configuração locais
+*.log
+*.env
+.env.*
+secrets.json
+
+# Docker
+Dockerfile*
+docker-compose.yml
+*.tar
