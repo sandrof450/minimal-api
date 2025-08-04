@@ -58,19 +58,6 @@ dotnet test
 📝 Licença
 Este projeto está licenciado sob os termos da MIT License.
 
-yaml
-Copiar
-Editar
-
 ---
 
 Se quiser, posso gerar esse arquivo e te passar o conteúdo pronto para colar ou até te orientar sobre como fazer o commit no GitHub diretamente. Deseja isso?
-
-
-
-
-
-
-
-
-Perguntar ao ChatGPT
